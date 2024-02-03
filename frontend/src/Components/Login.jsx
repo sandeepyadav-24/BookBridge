@@ -1,28 +1,48 @@
-//import TextField from "@mui/material/TextField";
-//import Button from "@mui/material/Button";
-//import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import { useState } from "react";
+
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState(""); // Change state variable to 'username'
   const [password, setPassword] = useState("");
+  
   const btnClick = () => {
-    console.log(`email: ${email} , password: ${password}`);
-    const url = "http://localhost:3000/user/login";
+    console.log(`username: ${username}, password: ${password}`); // Log username
+    
+    const data = {
+      username: username, // Change field to 'username'
+      password: password,
+    };
+    
+    const url = "http://localhost:3000/auth/login";
+    const authToken = localStorage.getItem("token");
+    
     const options = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        email: email,
-        password: password,
+        "auth-token": `Bearer ${authToken}`, // Include auth token in the header
       },
+      body: JSON.stringify(data),
     };
+    
     fetch(url, options)
-      .then((response) => response.json())
-      .then((data) => {
-        alert(data.mes + " ");
-        localStorage.setItem("token", data.token);
-        window.location = "/";
-      });
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.mes) {
+        alert(data.mes);
+      } else {
+        alert("Login successful!");
+      }
+      localStorage.setItem("token", data.token);
+      window.location = "/";
+    })
+    .catch((error) => {
+      console.error("Error occurred during login:", error);
+      alert("An error occurred during login. Please try again.");
+    });
+  
   };
 
   return (
@@ -37,10 +57,10 @@ const Login = () => {
           <div className="my-3">
             <TextField
               id="outlined-basic"
-              label="E-mail"
+              label="Username" // Change label to 'Username'
               variant="outlined"
               onChange={(e) => {
-                setEmail(e.target.value);
+                setUsername(e.target.value);
               }}
             />
           </div>

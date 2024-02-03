@@ -3,6 +3,7 @@ import Signup from "./Components/Signup";
 import Login from "./Components/Login";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
+import Sell from "./Components/Sell";
 
 import {
   RecoilRoot,
@@ -12,6 +13,7 @@ import {
   useRecoilValue,
 } from "recoil";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Store from "./Components/Store";
 
 //import CarouselBanner from "./Components/CarouselBanner";
 
@@ -26,6 +28,8 @@ const App = () => {
               <Route path="/signup" element={<Signup />}></Route>
               <Route path="/login" element={<Login />}></Route>
               <Route path="/about" element={<About />}></Route>
+              <Route path="/store" element={<Store />}></Route>
+              <Route path="/store/createsell" element={<Sell />}></Route>
               <Route path="/contact" element={<Contact />}></Route>
             </Routes>
           </Router>

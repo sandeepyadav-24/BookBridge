@@ -42,7 +42,8 @@ Router.post('/createsell', fetchUser, [
         // if book is null(couldn't make entry in db), return error
         if (!book) { return res.status(422).json({ success: false, error: "Error creating item in database." }) };
 
-        res.status(200).json({ success: true, msg: "Book listed for sale successfully" });
+        res.status(200).json({ success: true, message: "Book listed for sale successfully" });
+
 
     } catch (error) {
         // Returning error if something goes wrong

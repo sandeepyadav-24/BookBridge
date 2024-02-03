@@ -1,0 +1,30 @@
+.store {
+    background-color: #ffe5e5; /* Light pink background color */
+    padding: 20px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .rentButton,
+  .sellButton,
+  .requestButton {
+    background-color: #ffffff; /* White button background color */
+    color: #ff6b6b; /* Light pink button text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .rentButton:hover,
+  .sellButton:hover,
+  .requestButton:hover {
+    background-color: #ffdada; /* Light pink background color on hover */
+  }
+  

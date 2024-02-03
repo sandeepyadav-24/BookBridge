@@ -23,7 +23,7 @@ const Navbar = () => {
           </span>
           <span
             className=" hover:text-blue-600 mx-0.5 md:mx-5"
-            onClick={() => (window.location = "/books")}
+            onClick={() => (window.location = "/store")}
           >
             Store
           </span>
