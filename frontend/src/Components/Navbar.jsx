@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 //import Button from "@mui/material/Button";
 const Navbar = () => {
   const token = localStorage.token;
-  if (token) {
+  if (token && token!=undefined) {
     return (
       <div className="text-xl flex flex-row mb-4 rounded-xl px-5 text-teal-950 space-x-2 bg-white md:mx-20 md:py-5 mx-5 py-2 justify-between ">
         <div className="logo">

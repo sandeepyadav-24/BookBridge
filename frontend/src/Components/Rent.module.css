@@ -1,0 +1,49 @@
+/* rent.module.css */
+
+.rent {
+    background-color: #ffe5e5; /* Light pink background color */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #ff6b6b; /* Light pink title text color */
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .inputField {
+    width: 300px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ff6b6b; /* Light pink border */
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .submitButton {
+    width: 200px;
+    padding: 10px;
+    background-color: #ffffff; /* White button background color */
+    color: #ff6b6b; /* Light pink button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #ffdada; /* Light pink background color on hover */
+  }
+  
+  .error {
+    color: #ff6b6b; /* Light pink error text color */
+    margin-top: 10px;
+  }
+  

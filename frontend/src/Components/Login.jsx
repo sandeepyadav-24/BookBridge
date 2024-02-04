@@ -4,14 +4,14 @@ import Typography from "@mui/material/Typography";
 import { useState } from "react";
 
 const Login = () => {
-  const [username, setUsername] = useState(""); // Change state variable to 'username'
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   
   const btnClick = () => {
-    console.log(`username: ${username}, password: ${password}`); // Log username
+    console.log(`username: ${username}, password: ${password}`);
     
     const data = {
-      username: username, // Change field to 'username'
+      username: username,
       password: password,
     };
     
@@ -22,7 +22,7 @@ const Login = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "auth-token": `Bearer ${authToken}`, // Include auth token in the header
+        "auth-token": `Bearer ${authToken}`,
       },
       body: JSON.stringify(data),
     };
@@ -30,13 +30,13 @@ const Login = () => {
     fetch(url, options)
     .then((response) => response.json())
     .then((data) => {
-      if (data.mes) {
-        alert(data.mes);
+      if (data.msg) {
+        alert(data.msg);
       } else {
         alert("Login successful!");
       }
-      localStorage.setItem("token", data.token);
-      window.location = "/";
+      localStorage.setItem("token", data.token); // Corrected storage key to "token"
+      // Handle routing using React Router or any other suitable method
     })
     .catch((error) => {
       console.error("Error occurred during login:", error);
@@ -48,8 +48,8 @@ const Login = () => {
   return (
     <div className="bg-[#380067] flex flex-col md:flex-row h-screen">
       <div className="text-white font-bold  text-5xl my-16 md:my-32 mx-10 ">
-        <h1>Create a personal library</h1>
-        <h2>You can create your own web shelfs where your books will store</h2>
+        <h1 className="py-5">Wanna Save the Environment?</h1>
+        <h2>Lend your books for someone else to read it ;)</h2>
       </div>
       <div className="py-10 px-10  md:mx-10 bg-white  rounded-t-2xl md:rounded-2xl md:w-2/4 md:my-32">
         <Typography variant="h4">Sign Up</Typography>
@@ -57,7 +57,7 @@ const Login = () => {
           <div className="my-3">
             <TextField
               id="outlined-basic"
-              label="Username" // Change label to 'Username'
+              label="Username"
               variant="outlined"
               onChange={(e) => {
                 setUsername(e.target.value);
@@ -82,15 +82,18 @@ const Login = () => {
           >
             Login
           </button>
-          <h3 className="my-5">
-            Don't have have account?
-            <span
+          <Typography variant="h6" className="my-5" style={{ color: '#fff' }}>
+          Don't have have account?
+          <span style={{color: '#fff'}}
               onClick={() => (window.location = "/signup")}
               className="text-[#380067] font-extrabold"
             >
               Sign up
             </span>
-          </h3>
+</Typography>
+            
+           
+          
         </div>
       </div>
     </div>

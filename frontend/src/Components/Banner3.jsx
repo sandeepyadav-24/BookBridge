@@ -18,10 +18,10 @@ const Banner3 = () => {
         </div>
       </div>
       <div className="bg-white px-5 py-3 rounded-xl my-2 text-[#380067] font-semibold mx-8 md:mx-96 text-center">
-        Read complete story of why and how i built glimpse
+        Read complete story of why and how we built glimpse
       </div>
       <h1 className="mx-2 text-center text-[#380067] font-bold">
-        Made with 🔥 by Sandeep Yadav
+        Made by Sandeep Yadav and Akshit
       </h1>
     </div>
   );

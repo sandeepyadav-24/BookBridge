@@ -3,11 +3,10 @@ const Banner1 = () => {
     <div className="flex flex-col md:flex-row bg-white rounded-3xl md:m-20 md:p-10 p-5 m-5 ">
       <div>
         <h1 className="font-bold text-4xl  px-3 md:px-8 py-3 md:py-5">
-          Create your own online library and manage your books with ease.
+          Book-Bridge: The Connecting Bridge Between You and Your Favourite Books
         </h1>
         <h1 className="font-medium text-xl px-3 md:px-8 py-3 md:py-5">
-          Add books to your collection as currently reading, want to read and
-          alreday read.
+          Lend and Borrow Books within JIIT
         </h1>
       </div>
       <div>
