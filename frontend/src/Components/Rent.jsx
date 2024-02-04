@@ -1,7 +1,7 @@
 // Rent.jsx
 
 import React, { useState } from "react";
-import styles from "./rent.module.css";
+import styles from "./Rent.module.css";
 import Navbar from "./Navbar";
 
 const Rent = () => {
@@ -27,7 +27,7 @@ const Rent = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "auth-token": `Bearer ${authToken}`,
+          "auth-token": authToken,
         },
         body: JSON.stringify(data),
       };

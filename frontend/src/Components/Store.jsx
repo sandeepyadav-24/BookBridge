@@ -17,8 +17,9 @@ const Store = () => {
       </div>
       <div className={styles.buttons}>
         <button className={styles.rentButton}><Link to="/store/createsell">Sell a Book</Link></button>
-        <button className={styles.rentButton}><Link to="/store/availablebooks">Available Books</Link></button>
-        <button className={styles.sellButton}><Link to="/store/rent">Rent a Book</Link></button>
+        <button className={styles.available}><Link to="/store/availablebooks">Buy Book</Link></button>
+        <button className={styles.sellButton}><Link to="/store/rent">Lend a Book</Link></button>
+        <button className={styles.sellButton}><Link to="/store/availablebooksforrent">Borrow Book</Link></button>
         
       </div>
     </div>

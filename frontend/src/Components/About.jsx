@@ -2,7 +2,7 @@ const About = () => {
   return (
     <div className="bg-[#E9D5FF] py-3 md:py-14 md:h-screen">
       <h1 className="font-extrabold text-4xl mx-10 my-5">
-        About Me & Project Inspiration
+        About Us & Project Inspiration
       </h1>
       <div className="bg-white px-10 py-5 my-3 mx-5 md:mx-14 md:p-6 rounded-2xl md:flex md:flex-row">
         <div className="Content md:mx-24">
@@ -10,9 +10,9 @@ const About = () => {
             📚 Hello, Fellow Book Enthusiasts! Welcome to Glimpse! 📚
           </h2>
           <h2>
-            Hello! I'm Sandeep Yadav, a fervent web developer with a deep love
+            Hello! We are Sandeep Yadav and Akshit, a fervent web developer with a deep love
             for books. Ever lost a captivating book recommendation in the chaos
-            of screenshots? I did too! That's why I crafted this digital haven
+            of screenshots? Wedid too! That's why Wecrafted this digital haven
             for fellow book lovers like you and me.
           </h2>
           <br />
@@ -20,7 +20,7 @@ const About = () => {
 
           <h2>
             As a bookworm, I've snapped countless book recommendations only to
-            forget them later. That's why I built a sanctuary—a space for
+            forget them later. That's why Webuilt a sanctuary—a space for
             enthusiasts like us. Capture, organize, and discover in this
             enchanting literary world!
           </h2>
@@ -61,7 +61,10 @@ const About = () => {
             </a>
           </h1>
           <h1>
-            Email: <a href="">sandeepyadav004343@gmail.com</a>
+            Email: <a href="">sandeepyadav004343@gmail.com
+            </a>
+            Email: <a href="">iamakshitheregmail.com
+            </a>
           </h1>
         </div>
       </div>

@@ -71,7 +71,7 @@
     font-style: italic;
   }
  *{
-    
+   
  }
   
 .store {
@@ -82,6 +82,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow-y: hidden;
   
 }
 .store{
@@ -120,25 +121,21 @@
   margin-top: 20px;
   margin-left: 2px;
   margin-right: 2px;
+  width: 40vw;
 }
 
 .rentButton,
 .sellButton,
-.requestButton {
+.available {
   background-color: #ffffff;
   color: #ff6b6b;
   border: none;
-  padding: 14px 25px;
-  font-size: 16px;
+  padding: 12px 20px; /* Adjusted padding */
+  font-size: 16px; /* Adjusted font size */
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-.briefing {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  font-size: 30px;
+  width: 110vw;
 }
 
 .rentButton:hover,
@@ -146,6 +143,20 @@
 .requestButton:hover {
   background-color: #ffdada;
   color: black;
+}
+
+.briefing {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  font-size: 30px;
+}
+
+
+.available{
+  background-color: #ffdada;
+  color: black;
+  
 }
 .heading {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

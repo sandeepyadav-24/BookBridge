@@ -5,6 +5,7 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Sell from "./Components/Sell";
 import "../src/scrollbar.css"
+import AvailableBooksToRent from "./Components/AvailableBooksToRent";
 
 import {
   RecoilRoot,
@@ -36,6 +37,8 @@ const App = () => {
               <Route path="/store/rent" element={<Rent />}></Route>
               <Route path="/contact" element={<Contact />}></Route>
               <Route path="/store/availablebooks" element={<AvailableBooks />}></Route>
+              <Route path="/store/availablebookstorent" element={<AvailableBooks />}></Route>
+
             </Routes>
           </Router>
         </>
