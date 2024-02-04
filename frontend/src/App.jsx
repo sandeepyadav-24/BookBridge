@@ -4,6 +4,7 @@ import Login from "./Components/Login";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Sell from "./Components/Sell";
+import "../src/scrollbar.css"
 
 import {
   RecoilRoot,
