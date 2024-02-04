@@ -2,19 +2,19 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
+import {Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
   
   const btnClick = () => {
-    console.log(`username: ${username}, password: ${password}`);
     
     const data = {
       username: username,
       password: password,
     };
-    
     const url = "http://localhost:3000/auth/login";
     const authToken = localStorage.getItem("token");
     
@@ -22,7 +22,6 @@ const Login = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "auth-token": `Bearer ${authToken}`,
       },
       body: JSON.stringify(data),
     };
@@ -34,8 +33,9 @@ const Login = () => {
         alert(data.msg);
       } else {
         alert("Login successful!");
+        navigate('/')
       }
-      localStorage.setItem("token", data.token); // Corrected storage key to "token"
+      localStorage.setItem("token", data.authToken); // Corrected storage key to "token"
       // Handle routing using React Router or any other suitable method
     })
     .catch((error) => {
@@ -85,10 +85,9 @@ const Login = () => {
           <Typography variant="h6" className="my-5" style={{ color: '#fff' }}>
           Don't have have account?
           <span style={{color: '#fff'}}
-              onClick={() => (window.location = "/signup")}
               className="text-[#380067] font-extrabold"
             >
-              Sign up
+              <Link to="/signup">Sign up</Link>
             </span>
 </Typography>
             
