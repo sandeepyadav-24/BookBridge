@@ -61,31 +61,31 @@ const Sell = () => {
         <Navbar />
       <h1>List a Book for Sale</h1>
       <div className={styles.form}>
-        <input
+        <input className={styles.input}
           type="text"
           placeholder="Book Name"
           value={bookname}
           onChange={(e) => setBookname(e.target.value)}
         />
-        <input
+        <input className={styles.input}
           type="text"
           placeholder="Author"
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
-        <input
+        <input className={styles.input}
           type="number"
           placeholder="Condition (1-5)"
           value={condition}
           onChange={(e) => setCondition(e.target.value)}
         />
-        <input
+        <input className={styles.input}
           type="number"
           placeholder="Price"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
         />
-        <button onClick={btnClick}>List for Sale</button>
+        <button className={styles.salebtn} style={{color:"white"}} onClick={btnClick}>List for Sale</button>
       </div>
       {errorMessage && <div className={styles.error}>{errorMessage}</div>}
     </div>
