@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "./rent.module.css";
+import Navbar from "./Navbar";
 
 const Rent = () => {
   const [bookname, setBookname] = useState("");
@@ -52,6 +53,7 @@ const Rent = () => {
 
   return (
     <div className={styles.rent}>
+        <Navbar />
       <h1 className={styles.title}>Request a Book for Rent</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <input
