@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import styles from "./Sell.module.css";
 import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
 
 const Sell = () => {
   const [bookname, setBookname] = useState("");
@@ -8,6 +9,13 @@ const Sell = () => {
   const [condition, setCondition] = useState("");
   const [price, setPrice] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(()=>{
+    if(!localStorage.getItem("token")){
+      navigate('/login')
+    }
+  })
 
   const btnClick = async () => {
     try {
@@ -28,7 +36,7 @@ const Sell = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "auth-token": `Bearer ${authToken}`,
+          "auth-token": authToken,
         },
         body: JSON.stringify(data),
       };

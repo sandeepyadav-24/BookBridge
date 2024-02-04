@@ -1,0 +1,45 @@
+.catalogue {
+    background-color: lightpink;
+    padding: 20px;
+}
+
+.bookList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bookItem {
+    font-size: 25px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    width: 25vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+}
+
+.bookItem img {
+    max-width: 100%;
+}
+
+.bookDetails {
+    margin-top: 10px;
+}
+
+.bookDetails h3 {
+    margin: 0;
+}
+
+.bookDetails p {
+    margin: 5px 0;
+}
+.catalogue{
+    background-image: url(../assets/bookgif2.gif);
+    height: 100vh;
+}
