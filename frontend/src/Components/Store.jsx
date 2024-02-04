@@ -6,8 +6,10 @@ import bookImage from "../assets/bookgif.gif"; // Import an example book image
 
 const Store = () => {
   return (
+    <>
+    
     <div className={styles.store}>
-      <Navbar />
+      <Navbar></Navbar>
       <h1 className={styles.heading}>Welcome to the Book Store</h1>
       <div className={styles.intro}>
         <p className={styles.briefing}>Welcome to our book store! Browse our collection of books, rent or buy, and enjoy reading.</p>
@@ -19,6 +21,7 @@ const Store = () => {
         
       </div>
     </div>
+    </>
   );
 };
 

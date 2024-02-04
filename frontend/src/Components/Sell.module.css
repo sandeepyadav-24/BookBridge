@@ -11,7 +11,11 @@
    
     align-items: center;
   }
-  
+  .heading{
+    color: white;
+    font-size: 21px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
   .form {
     display: flex;
     flex-direction: column;
@@ -27,7 +31,7 @@
     outline: none;
     height: 8vh;
     width: 75vw;
-    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
   button {

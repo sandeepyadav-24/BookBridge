@@ -59,7 +59,7 @@ const Sell = () => {
     
     <div className={styles.sell}>
         <Navbar />
-      <h1>List a Book for Sale</h1>
+      <h1 className={styles.heading}>List a Book for Sale</h1>
       <div className={styles.form}>
         <input className={styles.input}
           type="text"
